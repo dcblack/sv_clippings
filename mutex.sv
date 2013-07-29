@@ -61,7 +61,7 @@ endclass
 
 `ifndef MUTEX_ERROR
 `define MUTEX_ERROR(message,lno=`__LINE__)\
-   $display("%0t: %s(%0d) MUTEX ERROR: %s",$time,fnam,lno,message)
+   $display("%0t: %s(%0d) MUTEX ERROR: %s",$time,`__FILE__,lno,message)
 `endif
 // Compiler independent control of immediate assertions -- does NOT handle 'else' clause
 `ifndef NASSERT
